@@ -1,0 +1,21 @@
+potrzebna jest dependencja
+<dependency>
+  <groupId>nz.net.ultraq.thymeleaf</groupId>
+  <artifactId>thymeleaf-layout-dialect</artifactId>
+  <version>2.0.5</version>
+</dependency>
+
+i klasę konfiguracyjną
+
+@Configuration
+public class ThymeleafConfig {
+
+    //configuracja thymeleafa layout
+    @Bean
+     @Bean
+        public LayoutDialect layoutDialect() {
+            return new LayoutDialect();
+        }
+
+        na stronach na któryc ma się wyświetlic layout dodajemye w html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}"
+}
